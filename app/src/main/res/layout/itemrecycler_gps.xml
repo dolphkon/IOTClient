@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<TextView
+    android:id="@+id/tv_recy_gtime"
+    android:layout_width="wrap_content"
+    android:layout_height="25dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:text="2018-09-01"/>
+
+    <TextView
+        android:id="@+id/textview_recy_gdevice"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="设备号:"
+       android:layout_toRightOf="@+id/tv_recy_gtime"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="128dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_recy_gdevice"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:text="001"
+        android:layout_toRightOf="@+id/textview_recy_gdevice"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IOTClient.iml" filepath="$PROJECT_DIR$/IOTClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JNChartLib/JNChartLib.iml" filepath="$PROJECT_DIR$/JNChartLib/JNChartLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mjpeg-view/mjpeg-view.iml" filepath="$PROJECT_DIR$/mjpeg-view/mjpeg-view.iml" />
+    </modules>
+  </component>
+</project>

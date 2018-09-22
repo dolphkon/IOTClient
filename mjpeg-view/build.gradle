@@ -1,0 +1,61 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.3"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName project.version
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    useLibrary 'org.apache.http.legacy'
+    sourceSets {
+        main.jni.srcDirs = []
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:support-annotations:26.1.0'
+    api 'io.reactivex:rxjava:1.3.8'
+    api 'io.reactivex:rxandroid:1.2.1'
+}
+
+//apply from: '../bintray.gradle'
+
+task hello(dependsOn: build) {
+    println ''
+    println '         _              _          _            _            _     _          _ '
+    println '        /\\ \\     _     /\\ \\       /\\ \\         /\\ \\         /\\ \\  /\\ \\    _ / /\\'
+    println '       /  \\ \\   /\\_\\   \\ \\ \\     /  \\ \\       /  \\ \\____   /  \\ \\ \\ \\ \\  /_/ / /'
+    println '      / /\\ \\ \\_/ / /   /\\ \\_\\   / /\\ \\ \\     / /\\ \\_____\\ / /\\ \\ \\ \\ \\ \\ \\___\\/ '
+    println '     / / /\\ \\___/ /   / /\\/_/  / / /\\ \\ \\   / / /\\/___  // / /\\ \\_\\/ / /  \\ \\ \\ '
+    println '    / / /  \\/____/   / / /    / / /  \\ \\_\\ / / /   / / // /_/_ \\/_/\\ \\ \\   \\_\\ \\'
+    println '   / / /    / / /   / / /    / / / _ / / // / /   / / // /____/\\    \\ \\ \\  / / /'
+    println '  / / /    / / /   / / /    / / / /\\ \\/ // / /   / / // /\\____\\/     \\ \\ \\/ / / '
+    println ' / / /    / / /___/ / /__  / / /__\\ \\ \\/ \\ \\ \\__/ / // / /______      \\ \\ \\/ /  '
+    println '/ / /    / / //\\__\\/_/___\\/ / /____\\ \\ \\  \\ \\___\\/ // / /_______\\      \\ \\  /   '
+    println '\\/_/     \\/_/ \\/_________/\\/________\\_\\/   \\/_____/ \\/__________/       \\_\\/    '
+    println ':see https://github.com/niqdev/ipcam-view\n'
+    println '*--~> [' + project.group + ':' + rootProject.name + ':' + project.version + '] <~--*\n'
+}

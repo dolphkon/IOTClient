@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/item_layoutbar">
+    </include>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/account_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/tv_account_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="账号设置"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/select"/>
+            <TextView
+                android:id="@+id/head_ico"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textSize="16sp"
+                android:text="头像"
+                android:layout_below="@+id/tv_account_setting"
+                android:layout_marginTop="20dp"/>
+            <ImageButton
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/lssing"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/head_ico"
+                android:layout_marginRight="10dp"
+
+                />
+            <TextView
+                android:id="@+id/tv_change_ico"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="更换头像"
+                android:layout_below="@+id/head_ico"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:textColor="#595959"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/tv_change_ico"></View>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/tv_basic"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="基本设置"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/select"></TextView>
+                <TextView
+                    android:id="@+id/tv_skin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="主题肤色"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/tv_basic"/>
+
+               <TextView
+                   android:id="@+id/tv_nigth"
+                   android:layout_width="wrap_content"
+                   android:layout_height="25dp"
+                   android:text="夜间模式"
+                   android:layout_below="@+id/tv_skin"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+

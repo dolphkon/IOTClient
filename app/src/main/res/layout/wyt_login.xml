@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+   >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginBottom="30dp"
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+         android:src="@drawable/iot_logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="52dp"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="2dp"/>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/edt_login_account"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="28dp"
+            android:background="@android:color/transparent"
+            android:hint="账号"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:layout_marginRight="18dp"
+            android:maxLines="1"></EditText>
+
+        <EditText
+            android:id="@+id/edt_login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:inputType="textPassword"
+            android:hint="密码"
+            android:maxLines="1"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textColorHint="#ffffff"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="18dp"
+            android:background="@android:color/transparent"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/keep_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="记住密码"
+            android:textColor="@color/colorAccent"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login_click_to_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_bg"
+        android:text="登录"
+        android:textColor="@android:color/white" />
+    <Button
+        android:id="@+id/tx_login_click_to_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_bg"
+        android:text="注册"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

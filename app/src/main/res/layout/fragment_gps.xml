@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/recy_gps"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/gps_error_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/load_error" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="网络出错啦，请点击按钮重新加载"
+            android:textColor="#FF000000"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_reload_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/shape_reload_btn_bg"
+            android:text="重新加载"
+            android:textColor="#FF000000"
+            android:textSize="19sp" />
+    </LinearLayout>
+</LinearLayout>
