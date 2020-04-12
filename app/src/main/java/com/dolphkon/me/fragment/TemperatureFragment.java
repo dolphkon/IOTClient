@@ -156,7 +156,7 @@ public class TemperatureFragment extends Fragment implements View.OnClickListene
             requestDataFromServer();
            // 阻塞线程
             long time = System.currentTimeMillis();//去系统时间的毫秒数
-            while((System.currentTimeMillis()-time <2000)) {
+            while((System.currentTimeMillis()-time <4500)) {
             }
             if (UploadSuccess) {
                 return true;

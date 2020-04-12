@@ -32,7 +32,7 @@ public class MQTTService extends Service {
     public static final String TAG = MQTTService.class.getSimpleName();
     private static MqttAndroidClient client;
     private MqttConnectOptions conOpt;
-    private String host = "tcp://studio.iot-yun.com:1883";
+    private String host = "tcp://47.103.20.225:1883";
     private String userName = "nick";
     private String passWord = "dolphkon";
     String[] myTopic = {StaticClass.TOPIC_DOOR, StaticClass.TOPIC_SENSIRION, StaticClass.TOPIC_TEMPER};
@@ -67,9 +67,9 @@ public class MQTTService extends Service {
         // 心跳包发送间隔，单位：秒
         conOpt.setKeepAliveInterval(20);
         // 用户名
-        conOpt.setUserName(userName);
+       /* conOpt.setUserName(userName);
         // 密码
-        conOpt.setPassword(passWord.toCharArray());
+        conOpt.setPassword(passWord.toCharArray());*/
         // last will message
         boolean doConnect = true;
         String message = "{\"terminal_uid\":\"" + clientId + "\"}";

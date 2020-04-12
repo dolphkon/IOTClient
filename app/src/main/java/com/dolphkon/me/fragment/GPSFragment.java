@@ -36,16 +36,16 @@ import okhttp3.Response;
 /**
  * Created by dolphkon on 2018/8/14.
  */
-
 public class GPSFragment extends Fragment implements View.OnClickListener{
     private Dialog progressDialog;
+
+
     private List<GPSEventMsp> newgpsList=new ArrayList<>();
     private GPSAdapter gpsAdapter;
     private XRecyclerView recy_gps;
     private LinearLayout gps_error_page;
     private boolean UploadSuccess=false;
     private Button btn_reload_gps;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {

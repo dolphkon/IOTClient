@@ -1,16 +1,12 @@
 package com.dolphkon.me.fragment;
-
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkInfo;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -23,7 +19,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -50,7 +45,6 @@ import java.net.UnknownHostException;
  *  描述：    即时监控视频
  */
 public class VideoFragment   extends Fragment implements View.OnClickListener{
-
     private static final int SUCCESS_OFF =5;
     private static final int SUCCESS_ON = 6;
     private static final int TIMEOUT = 2;

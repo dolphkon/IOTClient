@@ -6,7 +6,7 @@ public class Config {
 	public static final String TAG = "com.mero.wyt_register";
 	public static final String ID="prefs";//当前应用的ID
 	public static final String CHARSET="UTF-8";//编码格式
-	public static final String URL="http://39.108.126.221:8080/IOTProj/OnlyServlet" ;//登录地址
+	public static final String URL="http://192.168.1.104:8080/IOTProj/OnlyServlet" ;//登录地址
 	public static final String UPLOADIMG = "http://studio.iot-yun.com:8086/image/user_icon";//头像上传地址
 	public static final String KEY_ACCOUNT = "account";
 	public static final String KEY_ACTION = "action";

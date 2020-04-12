@@ -159,7 +159,7 @@ public class SensirionFragment extends Fragment implements View.OnClickListener{
             requestDataFromServer();
             // 阻塞线程
             long time = System.currentTimeMillis();//去系统时间的毫秒数
-            while((System.currentTimeMillis()-time <2000)) {
+            while((System.currentTimeMillis()-time <3500)) {
             }
             Log.i("IOTlog","UploadSucess is : "+ UploadSuccess);
             if (UploadSuccess) {

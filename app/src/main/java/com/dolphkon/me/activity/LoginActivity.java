@@ -1,4 +1,5 @@
 package com.dolphkon.me.activity;
+
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -16,19 +17,15 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.dolphkon.me.R;
-import com.dolphkon.me.bean.StatusMsg;
 import com.dolphkon.me.utils.Config;
 import com.dolphkon.me.utils.LogUtil;
 import com.dolphkon.me.utils.LoginService;
 import com.dolphkon.me.utils.Sputil;
 import com.dolphkon.me.view.MainActivity;
-import com.google.gson.Gson;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONStringer;
 
-import io.realm.Case;
+import org.json.JSONException;
+import org.json.JSONStringer;
 
 /*
  *  项目名：IOTClient
@@ -134,7 +131,6 @@ private Button tx_login_click_to_register;
                     new LoginService(Config.URL, Config.KEY_LOGIN, wyt_account, wyt_pwd, "", new LoginService.ISuccessCallback() {
                         @Override
                         public void onSuccess(String response, int id) {
-                            pd.setMessage("恭喜你登录成功");
                             if (keep_password.isChecked()){
                                 Sputil.putString(LoginActivity.this,"username",wyt_account);
                                 Sputil.putString(LoginActivity.this,"password",wyt_pwd);
@@ -142,6 +138,7 @@ private Button tx_login_click_to_register;
                                 Sputil.deleteAllShare(LoginActivity.this);
                             }
                             startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                            pd.setMessage("恭喜你登录成功");
                             LogUtil.d("当前进程id"+android.os.Process.myTid());
                             handler.sendEmptyMessage(DISMISS);
                             finish();
@@ -178,6 +175,7 @@ private Button tx_login_click_to_register;
                             }
                         }
                     });
+//                    startActivity(new Intent(LoginActivity.this,MainActivity.class));
                 }
 
 
